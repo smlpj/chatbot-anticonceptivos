@@ -1,0 +1,65 @@
+{
+  "intents": [
+    {
+      "tag": "firstQuestion",
+      "patterns": [
+        "¿Cómo actua los anticonceptivos orales en mi cuerpo?",
+        "¿Cómo funcionan las píldoras anticonceptivas en mi cuerpo?"
+      ],
+      "responses": [
+        "Los anticonceptivos orales son compuestos de hormonas sintéticas que inhiben el eje hormonal que produce la ovulación (proceso en el que se libera un ovulo para ser fecundado por el espermatozoide"
+      ]
+    },
+    {
+      "tag": "secondQuestion",
+      "patterns": [
+        "Porque me tengo que tomar la pastilla todos los dias ?",
+        "¿Porque tengo que tomar la pastilla todos los dias?",
+        "¿Por qué tengo que tomar la pastilla todos los dias?"
+      ],
+      "responses": [
+        "Para que se realice la inhbicion del eje, es necesario la dosis diaria de las hormonas"
+      ]
+    },
+    {
+      "tag": "thirdQuestion",
+      "patterns": [
+        "¿Qué pasa si no tomo la pastilla?",
+        "¿Qué pasa si no tomo la pastilla anticonceptiva?"
+      ],
+      "responses": [
+        "Si no tomas la pastilla anticonceptiva, el eje hormonal se activa y se produce la ovulación, por lo que se puede quedar embarazada"
+      ]
+    },
+    {
+      "tag": "fourthQuestion",
+      "patterns": [
+        "¿Qué pasa si me olvido de tomar la pastilla?",
+        "¿Qué pasa si me olvido de tomar la pastilla anticonceptiva?"
+      ],
+      "responses": [
+        "Si te olvidas de tomar la pastilla anticonceptiva, debes tomarla lo antes posible, pero si ya es tarde, debes tomar la siguiente pastilla en el horario habitual"
+      ]
+    },
+    {
+      "tag": "fifthQuestion",
+      "patterns": [
+        "¿Qué pasa si me vomito?",
+        "¿Qué pasa si me vomito después de tomar la pastilla?"
+      ],
+      "responses": [
+        "Si te vomitas después de tomar la pastilla anticonceptiva, debes tomar la siguiente pastilla en el horario habitual"
+      ]
+    },
+    {
+      "tag": "sixthQuestion",
+      "patterns": [
+        "¿Qué pasa si me olvido de tomar la pastilla durante 3 días?",
+        "¿Qué pasa si me olvido de tomar la pastilla anticonceptiva durante 3 días?"
+      ],
+      "responses": [
+        "Si te olvidas de tomar la pastilla anticonceptiva durante 3 días, debes tomar la siguiente pastilla en el horario habitual"
+      ]
+    }
+  ]
+}
