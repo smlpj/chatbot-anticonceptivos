@@ -155,6 +155,16 @@ html {
   max-width: 100%;
 }
 
+.message_button {
+  margin-top: 10px;
+  background: #e0e0e0;
+  padding: 8px 12px;
+  max-width: 100%;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
 .messages__item--visitor,
 .messages__item--typing {
   border-top-left-radius: 20px;

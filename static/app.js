@@ -4,18 +4,25 @@ class Chatbox {
       openButton: document.querySelector(".chatbox__button"),
       chatBox: document.querySelector(".chatbox__support"),
       sendButton: document.querySelector(".send__button"),
+      messageButton: document.querySelector(".message_button"),
     };
 
     this.state = false;
-    this.messages = [];
+    this.messages = [
+      { name: "Sam", message: "Hola, ¿en qué te puedo ayudar?" },
+    ];
   }
 
   display() {
-    const { openButton, chatBox, sendButton } = this.args;
+    const { openButton, chatBox, sendButton, messageButton } = this.args;
 
     openButton.addEventListener("click", () => this.toggleState(chatBox));
 
     sendButton.addEventListener("click", () => this.onSendButton(chatBox));
+
+    messageButton.addEventListener("click", () =>
+      this.onMessageButton(chatBox)
+    );
 
     const node = chatBox.querySelector("input");
     node.addEventListener("keyup", ({ key }) => {
@@ -65,6 +72,33 @@ class Chatbox {
         console.error("Error:", error);
         this.updateChatText(chatbox);
         textField.value = "";
+      });
+  }
+
+  onMessageButton(chatbox) {
+    var message = chatbox.querySelector(".message_button");
+    let text1 = message.textContent;
+
+    let msg1 = { name: "User", message: text1 };
+    this.messages.push(msg1);
+
+    fetch("http://127.0.0.1:5000/predict", {
+      method: "POST",
+      body: JSON.stringify({ message: text1 }),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((r) => r.json())
+      .then((r) => {
+        let msg2 = { name: "Sam", message: r.answer };
+        this.messages.push(msg2);
+        this.updateChatText(chatbox);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        this.updateChatText(chatbox);
       });
   }
 
