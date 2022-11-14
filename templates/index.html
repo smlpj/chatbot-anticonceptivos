@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Venus Template</title>
+	<link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='dist/css/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+</head>
+
+<body class="is-boxed has-animations">
+	<div class="body-wrap boxed-container">
+		<header class="site-header text-light">
+			<div class="container">
+				<div class="site-header-inner">
+					<div class="brand header-brand">
+						<h1 class="m-0">
+							<a href="#">
+								<img class="header-logo-image"
+									src="{{ url_for('static', filename='dist/images/logo.svg') }}" alt="Logo">
+							</a>
+						</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero text-center text-light">
+				<div class="hero-bg"></div>
+				<div class="hero-particles-container">
+					<canvas id="hero-particles"></canvas>
+				</div>
+				<div class="container-sm">
+					<div class="hero-inner">
+						<div class="hero-copy">
+							<h1 class="hero-title mt-0">Chatbot informativo sobre diferentes tipos de anticonceptivos
+								(Versión 1)</h1>
+							<p class="hero-paragraph">Nuestro chatbot brinda la opción de consultar información acerca
+								de diferentes anticonceptivos, su uso, recomendaciones y respuestas a preguntas
+								frecuentes de usuarias de los mismos.</p>
+
+						</div>
+						<div class="mockup-container">
+							<div class="mockup-bg">
+								<img src="{{ url_for('static', filename='dist/images/iphone-hero-bg.svg') }}"
+									alt="iPhone illustration">
+							</div>
+							<img class="device-mockup"
+								src="{{ url_for('static', filename='dist/images/iphone-hero.png') }}" alt="iPhone Hero">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="features-extended section">
+				<div class="features-extended-inner section-inner">
+					<div class="features-extended-wrap">
+						<div class="container">
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									<div class="mockup-bg">
+										<img src="{{ url_for('static', filename='dist/images/iphone-feature-bg-01.svg') }}"
+											alt="iPhone Feature 01 illustration">
+									</div>
+									<img class="device-mockup is-revealing"
+										src="{{ url_for('static', filename='dist/images/iphone-feature-01.png') }}"
+										alt="iPhone Feature 01">
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Preguntas predeterminadas</h3>
+									<p class="m-0">¡Con uno o varios clicks, puedes llegar a la respuesta que necesitas!
+									</p>
+								</div>
+							</div>
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									<div class="mockup-bg">
+										<img src="{{ url_for('static', filename='dist/images/iphone-feature-bg-02.svg') }}"
+											alt="iPhone Feature 02 illustration">
+									</div>
+									<img class="device-mockup is-revealing"
+										src="{{ url_for('static', filename='dist/images/iphone-feature-02.png') }}"
+										alt="iPhone Feature 02">
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Preguntas abiertas</h3>
+									<p class="m-0">Además de las preguntas predeterminadas, puedes preguntarle al
+										chatbot lo que necesites saber, ya sea información general sobre los
+										anticonceptivos, o específica. Anímate a probar esta función.</p>
+								</div>
+							</div>
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									<div class="mockup-bg">
+										<img src="{{ url_for('static', filename='dist/images/iphone-feature-bg-03.svg') }}"
+											alt="iPhone Feature 03 illustration">
+									</div>
+									<img class="device-mockup is-revealing"
+										src="{{ url_for('static', filename='dist/images/iphone-feature-03.png') }}"
+										alt="iPhone Feature 03">
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Para todos los dispositivos</h3>
+									<p class="m-0">Tanto para dispositivos móviles como para computadores, ¡úsalo desde
+										donde quieras sin necesidad de registrarte!</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-particles-container">
+				<canvas id="footer-particles"></canvas>
+			</div>
+
+			<div class="site-footer-bottom">
+				<div class="container">
+					<div class="site-footer-inner">
+
+						<div class="footer-copyright">&copy; Universidad del Norte - Todos los derechos reservados</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="container">
+		<div class="chatbox">
+			<div class="chatbox__support">
+				<div class="chatbox__header">
+					<div class="chatbox__image--header">
+						<img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"
+							alt="image">
+					</div>
+					<div class="chatbox__content--header">
+						<h4 class="chatbox__heading--header">Chatbot</h4>
+						<p class="chatbox__description--header">Hola, mi nombre es Sam. ¿Cómo te puedo ayudar?</p>
+					</div>
+				</div>
+				<div class="chatbox__messages">
+					<div class="messages__item messages__item--visitor"> Hola, ¿en qué te puedo ayudar hoy?
+
+					</div>
+					<div></div>
+				</div>
+				<div class="chatbox__footer">
+					<input type="text" placeholder="Escribe un mensaje...">
+					<button class="chatbox__send--footer send__button">Enviar</button>
+				</div>
+			</div>
+			<div class="chatbox__button">
+				<button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+			</div>
+		</div>
+	</div>
+
+	<script type=text/javascript>  $SCRIPT_ROOT = {{ request.script_root|tojson }};</script>
+	<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+	<script src="{{ url_for('static', filename='dist/js/main.min.js') }}"></script>
+</body>
+
+</html>
