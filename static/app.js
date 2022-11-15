@@ -4,7 +4,7 @@ class Chatbox {
       openButton: document.querySelector(".chatbox__button"),
       chatBox: document.querySelector(".chatbox__support"),
       sendButton: document.querySelector(".send__button"),
-      messageButton: document.querySelector(".message_button"),
+      messageButton: document.querySelectorAll(".message_button"),
     };
 
     this.state = false;
@@ -20,9 +20,11 @@ class Chatbox {
 
     sendButton.addEventListener("click", () => this.onSendButton(chatBox));
 
-    messageButton.addEventListener("click", () =>
-      this.onMessageButton(chatBox)
-    );
+    messageButton.forEach((button) => {
+      button.addEventListener("click", () =>
+        this.onMessageButton(chatBox, button)
+      );
+    });
 
     const node = chatBox.querySelector("input");
     node.addEventListener("keyup", ({ key }) => {
@@ -75,9 +77,8 @@ class Chatbox {
       });
   }
 
-  onMessageButton(chatbox) {
-    var message = chatbox.querySelector(".message_button");
-    let text1 = message.textContent;
+  onMessageButton(chatbox, button) {
+    let text1 = button.textContent;
 
     let msg1 = { name: "User", message: text1 };
     this.messages.push(msg1);

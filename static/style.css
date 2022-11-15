@@ -32,6 +32,13 @@ html {
   right: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .chatbox {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
 /* CONTENT IS CLOSE */
 .chatbox__support {
   display: flex;
@@ -138,9 +145,21 @@ html {
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .chatbox__heading--header {
+    font-size: 1rem;
+  }
+}
+
 .chatbox__description--header {
   font-size: 0.9rem;
   color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .chatbox__description--header {
+    font-size: 0.8rem;
+  }
 }
 
 /* Messages */
@@ -170,6 +189,14 @@ html {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .messages__item--visitor,
+  .messages__item--typing {
+    font-size: 0.9rem;
+  }
 }
 
 .messages__item--operator {
@@ -178,6 +205,13 @@ html {
   border-bottom-left-radius: 20px;
   background: var(--primary);
   color: white;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .messages__item--operator {
+    font-size: 0.9rem;
+  }
 }
 
 /* FOOTER */
