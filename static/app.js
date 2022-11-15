@@ -17,7 +17,12 @@ class Chatbox {
         question: "Otra pregunta",
         answers: [
           "Edad para empezar a tomar anticonceptivos",
-          "Otra respuesta 2",
+          "Métodos de planificacion",
+          "Suspensión de pastillas",
+          "Relacionado con la menstruación",
+          "Efectos secundarios",
+          "Riesgos a tomar",
+          "Preguntas relacionadas con enfermedades",
         ],
       },
       {
@@ -25,19 +30,44 @@ class Chatbox {
         answers: [
           "¿Desde qué edad puedo iniciar el consumo de ellos?",
           "Si tengo 12, 13 o 14 años, ¿puedo tomar anticonceptivos?",
-          "Qué pasa si vomito la pastilla",
         ],
       },
       {
-        question: "¿Desde qué edad puedo iniciar el consumo de ellos?",
+        question: "Métodos de planificacion",
+        answers: ["¿Que métodos de planificación existen?"],
+      },
+      {
+        question: "Suspensión de pastillas",
+        answers: ["¿Cómo suspender las pastillas?"],
+      },
+      {
+        question: "Relacionado con la menstruación",
         answers: [
-          "Los anticonceptivos orales se pueden consumir desde que la mujer se desarolla y se encuentra menstruando.",
+          "Tengo 1 meses sin menstruar mientras tomo anticonceptivos. ¿Qué hago?",
+          "Desde que empecé la toma de anticonceptivos, el periodo me dura menos tiempo y sangró menos, ¿es normal?",
+          "Todos los días estoy manchando mis interiores, ¿por qué?",
+          "¿Qué hacer si todos los días estoy manchando mis interiores?",
         ],
       },
       {
-        question: "Si tengo 12, 13 o 14 años, ¿puedo tomar anticonceptivos?",
+        question: "Efectos secundarios",
         answers: [
-          "Solo siempre y cuando ya te hayas desarollado y tengas menstruacion. A pesar de esto es importante que las adolecentes tengan su cita con ginecologia y asi le puedan indicar su deseo de planificaion para que el medico le indique el mejor metodo de planificacion.",
+          "¿Qué efectos secundarios puedo esperar del medicamento?",
+          "¿Las pastillas engordan?",
+          "¿Es imposible que quede embarazada mientras tome las pastillas?",
+        ],
+      },
+      {
+        question: "Riesgos a tomar",
+        answers: [
+          "¿Mi pareja sexual puede evitar el uso de condon mientras este tomando anticonceptivos?",
+        ],
+      },
+      {
+        question: "Preguntas relacionadas con enfermedades",
+        answers: [
+          "¿Puedo tomar anticonceptivos si soy hipertensa?",
+          "¿Puedo tomar anticonceptivos si soy diabética?",
         ],
       },
     ];
@@ -151,6 +181,12 @@ class Chatbox {
   onAnotherQuestionButton(chatbox, button) {
     let questions = [
       '<div class="message_button messages__item--visitor">Edad para empezar a tomar anticonceptivos</div>',
+      '<div class="message_button messages__item--visitor">Métodos de planificacion</div>',
+      '<div class="message_button messages__item--visitor">Suspensión de pastillas</div>',
+      '<div class="message_button messages__item--visitor">Relacionado con la menstruación</div>',
+      '<div class="message_button messages__item--visitor">Efectos secundarios</div>',
+      '<div class="message_button messages__item--visitor">Riesgos a tomar</div>',
+      '<div class="message_button messages__item--visitor">Preguntas relacionadas con enfermedades</div>',
     ];
     questions.forEach((question) => {
       var temp = document.createElement("div");
