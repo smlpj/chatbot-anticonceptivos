@@ -1,0 +1,365 @@
+{
+  "intents": [
+    {
+      "tag": "firstQuestion",
+      "patterns": [
+        "Por qué se me hinchan los senos",
+        "Porque se me hinchan los pechos",
+        "Por que se me hinchan los pechos"
+      ],
+      "responses": [
+        "Las cargar hormonales de los anticonceptivos generan estimulación sobre los receptores de las glándulas mamarias y producen esa sensación de turgencia o hinchazón. Importante consultar con su medico si se generan dolores fuertes o salida de liquido o sangre por el pezon."
+      ]
+    },
+    {
+      "tag": "SecondQuestion",
+      "patterns": [
+        "Por qué se me hinchan los senos",
+        "Porque se me hinchan los pechos",
+        "Por que se me hinchan los pechos"
+      ],
+      "responses": [
+        "Las cargar hormonales de los anticonceptivos generan estimulación sobre los receptores de las glándulas mamarias y producen esa sensación de turgencia o hinchazón. Importante consultar con su medico si se generan dolores fuertes o salida de liquido o sangre por el pezon."
+      ]
+    },
+    {
+      "tag": "ThirdQuestion",
+      "patterns": [
+        "Es normal tener menos libido",
+        "Es normal no tener ganas de tener relaciones sexuales",
+        "No tengo ganas de relaciones sexuales"
+      ],
+      "responses": [
+        "Es un efecto secundario muy poco comun en las pacientes, a pesar de esto si se puede presentar y se debe dar un manejo con los medicos. Los cuales deberan restablecer el libido normal o realizar cambios en los metodos anticonceptivos."
+      ]
+    },
+    {
+      "tag": "FourthQuestion",
+      "patterns": [
+        "Cuando debo comenzar la caja",
+        "En que momento empiezo a tomar las pastillas",
+        "Que dia comienzo la caja"
+      ],
+      "responses": [
+        "Todos los anticonceptivos orales se deben comenzar el primer dia del ciclo menstrual (el primer dia que llega la menstruacion), luego de comenzar "
+      ]
+    },
+    {
+      "tag": "FifthQuestion",
+      "patterns": [
+        "Es posible perder mi fertilidad",
+        "Si no tomo anticonceptivos por mucho tiempo, puedo perder mi fertilidad",
+        "Puedo quedar infertil"
+      ],
+      "responses": [
+        "No, los ACO no generan perdida de la fertilidad, luego de 3-4 meses la fertilidad de la mujer debe estar restablecida por completa"
+      ]
+    },
+    {
+      "tag": "SixthQuestion",
+      "patterns": [
+        "Puedo quedar embarazada por el liquido preseminal",
+        "El líquido preseminal embaraza",
+        "El liquido preseminal es posible que me embarace"
+      ],
+      "responses": [
+        "Sí. El líquido preseminal podría contener espermatozoides; esto significa que existe una posibilidad de embarazo incluso si no se produce la eyaculación completa dentro de la vagina"
+      ]
+    },
+    {
+      "tag": "SeventhQuestion",
+      "patterns": [
+        "Tengo un mes sin menstruar mientras tomo anticonceptivos",
+        "Tengo 1 mes sin menstruar mientras tomo anticonceptivos",
+        "Tengo 1 meses sin menstruar mientras tomo anticonceptivos? Que hago?"
+      ],
+      "responses": [
+        "El problema realmente es cuando cumples más de 3 meses sin menstruar. En algunas ocasiones la falta de menstruation puede ocurrir. Para mayor tranquilidad realízate una prueba de embarazo. Y si esta es negativa, continúa tus anticonceptivos como de costumbre."
+      ]
+    },
+    {
+      "tag": "EigthQuestion",
+      "patterns": [
+        "Tengo dos meses sin menstruar mientras tomo anticonceptivos",
+        "Tengo 2 mes sin menstruar mientras tomo anticonceptivos",
+        "Tengo 2 meses sin menstruar mientras tomo anticonceptivos? Que hago?"
+      ],
+      "responses": [
+        "El problema realmente es cuando cumples más de 3 meses sin menstruar. En algunas ocasiones la falta de menstruation puede ocurrir. Para mayor tranquilidad realízate una prueba de embarazo. Y si esta es negativa, continúa tus anticonceptivos como de costumbre. Si luego de 3 meses no te llega la menstruacion lo mejor es que consultes con tu medico. "
+      ]
+    },
+    {
+      "tag": "NinethQuestion",
+      "patterns": [
+        "Tengo 3-6 meses sin menstruar mientras tomo anticonceptivos",
+        "Tengo de 3 a 6 sin menstruar mientras tomo anticonceptivos",
+        "Tengo de tres a seis meses sin menstruar mientras tomo anticonceptivos? Que hago?"
+      ],
+      "responses": [
+        "Si no menstruas durante varios meses (3 meses o mas), es probable que tengas lo que se conoce como amenorrea posterior a la pastilla anticonceptiva. La pastilla evita que tu cuerpo produzca las hormonas que participan en la ovulación y la menstruación. Debes acudir a tu médico."
+      ]
+    },
+    {
+      "tag": "TenthQuestion",
+      "patterns": [
+        "Desde que empecé la toma de anticonceptivos, el periodo me dura menos tiempo y sangró menos, es normal ?",
+        "Desde que empecé la toma de anticonceptivos, el periodo me dura menos tiempo y sangró menos es común ?",
+        "el periodo me dura menos tiempo y sangró menos, es normal ?"
+      ],
+      "responses": [
+        "Dado que las pastillas anticonceptivas detienen el ciclo menstrual, evitan tanto la ovulación como el revestimiento del útero –el endometrio–. Por lo que el sangrado por deprivación o sangrado de abstinencia es un sangrado muchísimo más ligero que el del sangrado menstrual normal. Es normal que el sangrado tiende a disminuir con el tiempo."
+      ]
+    },
+    {
+      "tag": "EleventhQuestion",
+      "patterns": [
+        "Si soy una mujer menopausica, puedo tomar anticonceptivos",
+        "Tengo la menopausia, puedo tomar anticonceptivos",
+        "Puedo tomar pastillas si tengo la menopausia?"
+      ],
+      "responses": [
+        "Si hay mujeres que toman anticonceptivos en la menopausia, pero estos contienen sólo gestágenos, ya que son un grupo seguro y eficaz para mujeres en la menopausia. Se recomineda que estos sean enviados por un medico especialista."
+      ]
+    },
+    {
+      "tag": "TwelvethQuestion",
+      "patterns": [
+        "Puedo estar embarazada sino me llega el periodo",
+        "Si hace varios meses no me llega el periodo puedo estar embarazada",
+        "Tengo meses sin que me llegue el periodo, puedo estar embarazada?"
+      ],
+      "responses": [
+        "Claro que si. Lo primero que hay que descartar en una paciente que no tiene el periodo actualmente pero antes si lo tenía es pueda estar embarazada. Para esto se recomineda realizar una cita con un ginecologo y realizarse una prueba casera de embarazo."
+      ]
+    },
+    {
+      "tag": "ThirteenthQuestion",
+      "patterns": [
+        "Puedo estar embarazada si mi pareja acabó dentro de mi",
+        "Mi novio terminó dentro de mi, puedo quedar embarazada",
+        "Mi novio terminó dentro de mi puedo estar embarazada"
+      ],
+      "responses": [
+        "Claro que sí, especialmente si la paciente se encuentra en sus días fértiles que corresponden a dos días antes y dos días después del día 14 del ciclo menstrual."
+      ]
+    },
+    {
+      "tag": "FourteenthQuestion",
+      "patterns": [
+        "Que método es más seguro : que mi pareja termine fuera de mi o la toma de aco?",
+        "Que método es más seguro que mi pareja termine fuera de mi o la toma de anticonceptivos ?",
+        "Es mejor tomar anticonceptivos o que mi pareja termine afuera"
+      ],
+      "responses": [
+        "Los anticonceptivos orales han demostrado mejor efectividad en anticoncepción con respecto al coito interrumpido. Los estudios realizados posicionan a los anticonceptivos orales como uno de los mejores metodos si se toma correctamente."
+      ]
+    },
+    {
+      "tag": "FourteenthQuestion",
+      "patterns": [
+        "Puedo tomar anticonceptivos mientras amamanto",
+        "Es posible tomar anticonceptivos mientras amamanto?",
+        "Es posible tomar pastillas mientras amamanto?"
+      ],
+      "responses": [
+        "Si puede tomar pero solo de gestagenos después de 6 semanas posparto. Anticoceptivos orales como el Poslac o Microlut cumplen dichos criterios."
+      ]
+    },
+    {
+      "tag": "FifteenthQuestion",
+      "patterns": [
+        "Puedo tomar anticonceptivos si acabo de parir ? ",
+        "Luego de parir puedo tomar pastillas",
+        "Luego de parir puedo tomar pastillas?"
+      ],
+      "responses": [
+        "Lo ideal es esperar por lo menos tres semanas luego del parto y realizar una evaluacion con su ginecologo para indicarle si puede seguir consumiendo anticonceptivos orales y cuales seran los apropiados"
+      ]
+    },
+    {
+      "tag": "SixteenthQuestion",
+      "patterns": [
+        "Puedo tomar anticonceptivos si me van a operar? ",
+        "Luego de operarme puedo tomar pastillas",
+        "Luego de una operacion puedo tomar pastillas?"
+      ],
+      "responses": [
+        "Los anticonceptivos orales deben suspenderse al menos 1 mes antes de cualquier cirugía mayor que requiera inmovilización durante mucho tiempo y no deben retomarse hasta 1 mes después por el riesgo tromboembólico que representan. Importante que para cirugias y procedimientos siempre contacte a su medico para que este le pueda explicar"
+      ]
+    },
+    {
+      "tag": "SeventeenthQuestion",
+      "patterns": [
+        "Puedo tomar anticonceptivos si soy hipertensa?",
+        "si soy hipertensa puedo tomar pastillas",
+        "soy una persona hipertensa puedo tomar pastillas?"
+      ],
+      "responses": [
+        "Los anticonceptivos orales combinados (AOC) pueden inducir la hipertensión arterial en un grupo pequeño de mujeres, y aumentar el riesgo cardiovascular, especialmente entre las personas con hipertensión. Por lo tanto, se recomienda consultar a su medico para que este pueda evaluar su riesgo y considerar su ingesta."
+      ]
+    },
+    {
+      "tag": "EighteenthQuestion",
+      "patterns": [
+        "Puedo tomar anticonceptivos si soy diabetica?",
+        "si soy diabetica puedo tomar pastillas",
+        "soy una persona diabetica puedo tomar pastillas?"
+      ],
+      "responses": [
+        "Si, puede tomarlos. La diabetes no interfiere en el consumo de anticonceptivos orales. "
+      ]
+    },
+    {
+      "tag": "NinenthQuestion",
+      "patterns": [
+        "Si solo practico sexo anal, debo tomar anticonceptivos? ",
+        "Si solo lo hago por atrás puedo quedar embarazada?",
+        "Si solo hago sexo anal debo tomar anticonceptivos"
+      ],
+      "responses": [
+        "Los anticonceptivos orales se utlizan en la prevencion de los embarazos, si usted solo practica sexo anal no va tener riesgo de quedar embarazada. A pesar de esto se le recomienda altamente utilizar preservativos ya que el sexo anal aumenta considerablemente el riesgo de enfermedades de transmicion sexual."
+      ]
+    },
+    {
+      "tag": "TwentythQuestion",
+      "patterns": [
+        "Si solo practico sexo oral, debo tomar anticonceptivos?  ",
+        "Puedo tomar anticoceptivos si solo practico sexo oral",
+        "Si solo hago sexo oral debo tomar anticonceptivos"
+      ],
+      "responses": [
+        "Los anticonceptivos orales se utlizan en la prevencion de los embarazos, si usted solo practica sexo anal no va tener riesgo de quedar embarazada."
+      ]
+    },
+    {
+      "tag": "TwentythOneQuestion",
+      "patterns": [
+        "Puedo quedar embarazada si solo mantengo relaciones sexuales con mujeres?",
+        "Soy lesbiana puedo quedar embarazada",
+        "Si solo tengo relaciones con mujeres debo tomar pastillas"
+      ],
+      "responses": [
+        "No, el embarazo solo se procuce cuando existe coito entre un hombre y una mujer. En el cual los espermatozoides que estan en el semen del hombre  deben entrar en la vagina."
+      ]
+    },
+    {
+      "tag": "TwentythTwoQuestion",
+      "patterns": [
+        "Si estoy tomando racutan puedo tomar anticonceptivos?",
+        "Estoy tomando Racutan puedo tomar pastillas?",
+        "Estoy tomando Racutan es posible tomar pastillas?"
+      ],
+      "responses": [
+        "La isotretinoína interfiere con la acción de la progestina microdosificada (minipill) de los anticonceptivos orales. Por lo tanto, se debe consultar con su medico para que este le pueda enviar otro metodos anticonceptivos."
+      ]
+    },
+    {
+      "tag": "TwentythThreeQuestion",
+      "patterns": [
+        "Aparte de los anticonceptivos debería usar otro método de planificación sexual?",
+        "Puedo tomar otros anticoceptivos además de las pastillas",
+        "Debería usar otro método anticoceptivo?"
+      ],
+      "responses": [
+        "Es importante que siempre utilice preservativos (condones), ya que los anticonceptivos solo previenen gestación y no enfermedades de transmisión sexual."
+      ]
+    },
+    {
+      "tag": "TwentythFourthQuestion",
+      "patterns": [
+        "Que beneficios tienen los anticonceptivos orales ?",
+        "Que beneficios tengo si tomo anticoceptivos orales",
+        "Que beneficios tengo si tomo las pastillas?"
+      ],
+      "responses": [
+        "Regulan el ciclo menstrual, reducen el sangrado y mejoran la dismenorrea. Disminuyen el riesgo de embarazo ectópico. Disminuyen el riesgo de enfermedad inflamatoria pélvica. Mejoran los síntomas de hiperandrogenismo (seborrea, hirsutismo, acné y alopecia)."
+      ]
+    },
+    {
+      "tag": "TwentythFifthQuestion",
+      "patterns": [
+        "Que pasa si no tomo correctamente los anticoceptivos orales ?",
+        "Que pasa si no tomo bien las pastillas",
+        "Que pasa si no tomo bien los anticoceptivos orales"
+      ],
+      "responses": [
+        "No tomarse las pastillas correctamente puede reducir su eficacia. Eso ocurre cuando no se sigue con el horario habitual o se saltan algunos días durante el mes. Por esto puede quedar embarazada si no se utiliza preservativos."
+      ]
+    },
+    {
+      "tag": "TwentythSixthQuestion",
+      "patterns": [
+        "Los anti conceptivos pueden generarme muchos balances hormonales ?",
+        "Las pastillas pueden generarme distintos balances hormonales ?",
+        "Las pastillas pueden generarme muchos balances hormonales ?"
+      ],
+      "responses": [
+        "Si, es importante consultar con su medico si presenta sangrados anormales "
+      ]
+    },
+    {
+      "tag": "TwentythSeventhQuestion",
+      "patterns": [
+        "Los aco puede generarme trastornos mentales ?",
+        "Los anticonceptivos puede generarme trastornos mentales ?",
+        "Las pastillas puede generarme trastornos mentales ?"
+      ],
+      "responses": ["No generan transtornos mentales"]
+    },
+    {
+      "tag": "TwentythEigthQuestion",
+      "patterns": [
+        "Los aco pueden generarme labilidad emocional?",
+        "Los anticoceptivos pueden generarme labilidad emocional?",
+        "Las pastillas pueden generarme labilidad emocional? ?"
+      ],
+      "responses": [
+        "Con el consumo de anticonceptivos orales Pueden aparecer los siguientes síntomas: irritabilidad y tendencia a discutir. Ansiedad e inquietud por problemas que se sobredimensionan. Tristeza, episodios de llanto y pensamientos derrotistas o incluso suicidas. Cambios de humor y labilidad emocional en nuestras relaciones."
+      ]
+    },
+    {
+      "tag": "TwentythNinethQuestion",
+      "patterns": [
+        "Cuanto tiempo maximo es recomendable tomar aco ?",
+        "Cuanto tiempo maximo es recomendado tomar pastillas?",
+        "Cual es el tiempo recomendado para tomar pastillas ?"
+      ],
+      "responses": [
+        "Se recomienda su uso hasta por cinco años, luego de este tiempo es importante que su medico le indique su mejor opcion como metodo anticonceptivo "
+      ]
+    },
+    {
+      "tag": "ThirtyteenthQuestion",
+      "patterns": [
+        "Puedo usarlas para abortar?",
+        "Sirven para abortar?",
+        "Puedo usar anticoceptivos para abortar?"
+      ],
+      "responses": [
+        "Los anticonceptivos orales no realizan aborto, ni son anticonceptivos de emergencia. Se deben usar durante todo el mes para que puedan prevenir la gestacion. Existen las  pastillas anticonceptivas de emergencia, que evitan que haya concepción luego de tener relaciones sexuales pero estas solo sirven hasta un maximo de 72 horas para su funcionamiento."
+      ]
+    },
+    {
+      "tag": "Thirty-oneteenthQuestion",
+      "patterns": [
+        "Puedo usar anticoptivos si consumo drogas psicoactivas frecuentemente ?",
+        "Si me drogo puedo tomarlas?",
+        "Me drogo puedo tomarlas?"
+      ],
+      "responses": [
+        "Si, hasta el momento no existe evidencia científica de que drogas como el LSD y la marihuana ocasionen disminución en el efecto anticonceptivo de las pastillas."
+      ]
+    },
+    {
+      "tag": "ThirtyTwoteenthQuestion",
+      "patterns": [
+        "Pueden causar calambres?",
+        "Causan calambres?",
+        "Si tomo pastillas me causaran calambres "
+      ],
+      "responses": [
+        "No, de hecho los anticonceptivos hormonales (que contienen solo progestina o una combinación de progestina y estrógeno) pueden ayudar con el dolor menstrual y los calambres."
+      ]
+    }
+  ]
+}
