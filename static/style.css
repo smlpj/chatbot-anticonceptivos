@@ -234,6 +234,7 @@ html {
   padding: 10px 10px;
   border-radius: 30px;
   text-align: left;
+  font-size: 1rem;
 }
 
 .chatbox__send--footer {

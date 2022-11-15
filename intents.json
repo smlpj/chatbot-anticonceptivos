@@ -3,62 +3,12 @@
     {
       "tag": "firstQuestion",
       "patterns": [
-        "¿Como actua los anticonceptivos orales en mi cuerpo?",
-        "¿Como funcionan las pildoras anticonceptivas en mi cuerpo?"
+        "Por qué se me hinchan los senos",
+        "Porque se me hinchan los pechos",
+        "Por que se me hinchan los pechos"
       ],
       "responses": [
-        "Los anticonceptivos orales son compuestos de hormonas sinteticas que inhiben el eje hormonal que produce la ovulacion (proceso en el que se libera un ovulo para ser fecundado por el espermatozoide"
-      ]
-    },
-    {
-      "tag": "secondQuestion",
-      "patterns": [
-        "Porque me tengo que tomar la pastilla todos los dias ?",
-        "¿Porque tengo que tomar la pastilla todos los dias?",
-        "¿Por que tengo que tomar la pastilla todos los dias?"
-      ],
-      "responses": [
-        "Para que se realice la inhbicion del eje, es necesario la dosis diaria de las hormonas"
-      ]
-    },
-    {
-      "tag": "thirdQuestion",
-      "patterns": [
-        "¿Que pasa si no tomo la pastilla?",
-        "¿Que pasa si no tomo la pastilla anticonceptiva?"
-      ],
-      "responses": [
-        "Si no tomas la pastilla anticonceptiva, el eje hormonal se activa y se produce la ovulacion, por lo que se puede quedar embarazada"
-      ]
-    },
-    {
-      "tag": "fourthQuestion",
-      "patterns": [
-        "¿Que pasa si me olvido de tomar la pastilla?",
-        "¿Que pasa si me olvido de tomar la pastilla anticonceptiva?"
-      ],
-      "responses": [
-        "Si te olvidas de tomar la pastilla anticonceptiva, debes tomarla lo antes posible, pero si ya es tarde, debes tomar la siguiente pastilla en el horario habitual"
-      ]
-    },
-    {
-      "tag": "fifthQuestion",
-      "patterns": [
-        "¿Que pasa si me vomito?",
-        "¿Que pasa si me vomito despues de tomar la pastilla?"
-      ],
-      "responses": [
-        "Si te vomitas despues de tomar la pastilla anticonceptiva, debes tomar la siguiente pastilla en el horario habitual"
-      ]
-    },
-    {
-      "tag": "sixthQuestion",
-      "patterns": [
-        "¿Que pasa si me olvido de tomar la pastilla durante 3 dias?",
-        "¿Que pasa si me olvido de tomar la pastilla anticonceptiva durante 3 dias?"
-      ],
-      "responses": [
-        "Si te olvidas de tomar la pastilla anticonceptiva durante 3 dias, debes tomar la siguiente pastilla en el horario habitual"
+        "Las cargar hormonales de los anticonceptivos generan estimulación sobre los receptores de las glándulas mamarias y producen esa sensación de turgencia o hinchazón. Importante consultar con su medico si se generan dolores fuertes o salida de liquido o sangre por el pezon."
       ]
     }
   ]
