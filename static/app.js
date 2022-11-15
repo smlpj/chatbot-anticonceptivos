@@ -4,24 +4,53 @@ class Chatbox {
       openButton: document.querySelector(".chatbox__button"),
       chatBox: document.querySelector(".chatbox__support"),
       sendButton: document.querySelector(".send__button"),
+      anotherQuestionButton: document.querySelector(".anotherQuestion__button"),
       messageButton: document.querySelectorAll(".message_button"),
     };
 
     this.state = false;
     this.messages = [
-      { name: "Sam", message: "Hola, ¿en qué te puedo ayudar?" },
+      { name: "Sam", message: "Hola, ¿en qué te puedo ayudar hoy?" },
     ];
     this.intents = [
       {
-        question: "Tipos de anticonceptivos",
-        answers: ["¿Que es el VIH?", "Hola"],
+        question: "Otra pregunta",
+        answers: [
+          "Edad para empezar a tomar anticonceptivos",
+          "Otra respuesta 2",
+        ],
       },
-      { question: "¿Qué es el VIH?", answers: ["Hola", "Chao"] },
+      {
+        question: "Edad para empezar a tomar anticonceptivos",
+        answers: [
+          "¿Desde qué edad puedo iniciar el consumo de ellos?",
+          "Si tengo 12, 13 o 14 años, ¿puedo tomar anticonceptivos?",
+          "Qué pasa si vomito la pastilla",
+        ],
+      },
+      {
+        question: "¿Desde qué edad puedo iniciar el consumo de ellos?",
+        answers: [
+          "Los anticonceptivos orales se pueden consumir desde que la mujer se desarolla y se encuentra menstruando.",
+        ],
+      },
+      {
+        question: "Si tengo 12, 13 o 14 años, ¿puedo tomar anticonceptivos?",
+        answers: [
+          "Solo siempre y cuando ya te hayas desarollado y tengas menstruacion. A pesar de esto es importante que las adolecentes tengan su cita con ginecologia y asi le puedan indicar su deseo de planificaion para que el medico le indique el mejor metodo de planificacion.",
+        ],
+      },
     ];
   }
 
   display() {
-    const { openButton, chatBox, sendButton, messageButton } = this.args;
+    const {
+      openButton,
+      chatBox,
+      sendButton,
+      anotherQuestionButton,
+      messageButton,
+    } = this.args;
 
     openButton.addEventListener("click", () => this.toggleState(chatBox));
 
@@ -32,6 +61,10 @@ class Chatbox {
         this.onMessageButton(chatBox, button)
       );
     });
+
+    anotherQuestionButton.addEventListener("click", () =>
+      this.onAnotherQuestionButton(chatBox, anotherQuestionButton)
+    );
 
     const node = chatBox.querySelector("input");
     node.addEventListener("keyup", ({ key }) => {
@@ -115,27 +148,72 @@ class Chatbox {
     });
   }
 
-  updateChatMessages(chatbox) {
-    var html = "";
-    this.messages
-      .slice()
-      .reverse()
-      .forEach(function (item, index) {
-        if (item.name === "Sam") {
-          html +=
-            '<div class="message_button messages__item--visitor">' +
-            item.message +
-            "</div>";
-        } else {
-          html +=
-            '<div class="message_button messages__item--operator">' +
-            item.message +
-            "</div>";
-        }
-      });
+  onAnotherQuestionButton(chatbox, button) {
+    let questions = [
+      '<div class="message_button messages__item--visitor">Edad para empezar a tomar anticonceptivos</div>',
+    ];
+    questions.forEach((question) => {
+      var temp = document.createElement("div");
+      temp.innerHTML = question;
+      var node = temp.firstChild;
+      node.addEventListener("click", () =>
+        this.onMessageButtonVisitor(chatbox, node)
+      );
+      chatbox
+        .querySelector(".chatbox__messages")
+        .insertBefore(
+          node,
+          chatbox.querySelector(".chatbox__messages").firstChild
+        );
+    });
+  }
 
-    const chatmessage = chatbox.querySelector(".chatbox__messages");
-    chatmessage.innerHTML = html;
+  onMessageButtonVisitor(chatbox, button) {
+    let text1 = button.textContent;
+    if (text1 === "") {
+      return;
+    }
+
+    this.updateChatText(chatbox);
+    this.intents.find((intent) => {
+      if (intent.question === text1) {
+        intent.answers.forEach((answer) => {
+          let msg2 = { name: "User", message: answer };
+          this.messages.push(msg2);
+          this.updateChatText2(chatbox);
+        });
+      }
+    });
+  }
+
+  onMessageButtonOperator(chatbox, button) {
+    let text1 = button.textContent;
+    console.log(text1);
+    if (text1 === "") {
+      return;
+    }
+    this.updateChatText(chatbox);
+
+    fetch("http://127.0.0.1:5000/predict", {
+      method: "POST",
+      body: JSON.stringify({ message: text1 }),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((r) => r.json())
+      .then((r) => {
+        let msg2 = { name: "Sam", message: r.answer };
+        this.messages.push(msg2);
+        this.intents.find((intent) => intent.question === answer)
+          ? this.updateChatText2(chatbox)
+          : this.updateChatText(chatbox);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        this.updateChatText(chatbox);
+      });
   }
 
   updateChatText(chatbox) {
@@ -162,9 +240,6 @@ class Chatbox {
   }
 
   updateChatText2(chatbox) {
-    var html = chatbox.querySelector(".chatbox__messages").innerHTML;
-    console.log(html);
-
     if (this.messages.slice(-1).pop().name === "Sam") {
       var s =
         '<div class="message_button messages__item--visitor">' +
@@ -173,7 +248,9 @@ class Chatbox {
       var temp = document.createElement("div");
       temp.innerHTML = s;
       var node = temp.firstChild;
-      node.addEventListener("click", () => this.onMessageButton(chatbox, node));
+      node.addEventListener("click", () =>
+        this.onMessageButtonVisitor(chatbox, node)
+      );
       chatbox
         .querySelector(".chatbox__messages")
         .insertBefore(
@@ -188,7 +265,9 @@ class Chatbox {
       var temp = document.createElement("div");
       temp.innerHTML = s;
       var node = temp.firstChild;
-      node.addEventListener("click", () => this.onMessageButton(chatbox, node));
+      node.addEventListener("click", () =>
+        this.onMessageButtonOperator(chatbox, node)
+      );
       chatbox
         .querySelector(".chatbox__messages")
         .insertBefore(
@@ -196,8 +275,6 @@ class Chatbox {
           chatbox.querySelector(".chatbox__messages").firstChild
         );
     }
-
-    console.log(html);
   }
 }
 

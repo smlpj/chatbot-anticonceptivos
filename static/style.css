@@ -71,6 +71,14 @@ html {
   cursor: pointer;
 }
 
+.anotherQuestion__button {
+  padding: 6px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 /* HEADER */
 .chatbox__header {
   top: 0;
@@ -182,6 +190,7 @@ html {
   border-radius: 20px;
   text-align: center;
   cursor: pointer;
+  color: rgb(104, 104, 233);
 }
 
 .messages__item--visitor,
