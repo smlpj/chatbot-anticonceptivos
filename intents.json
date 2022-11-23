@@ -12,17 +12,6 @@
       ]
     },
     {
-      "tag": "SecondQuestion",
-      "patterns": [
-        "Por que se me hinchan los senos",
-        "Porque se me hinchan los pechos",
-        "Por que se me hinchan los pechos"
-      ],
-      "responses": [
-        "Las cargar hormonales de los anticonceptivos generan estimulacion sobre los receptores de las glandulas mamarias y producen esa sensacion de turgencia o hinchazon. Importante consultar con su medico si se generan dolores fuertes o salida de liquido o sangre por el pezon."
-      ]
-    },
-    {
       "tag": "ThirdQuestion",
       "patterns": [
         "Es normal tener menos libido",
@@ -375,9 +364,9 @@
     {
       "tag": "ThirtyFourthteenthQuestion",
       "patterns": [
-        "Los anticoceptivos me hinchan?",
-        "Las pastillas me pueden hinchar?",
-        "Los anticoceptivos provocan la caida de cabello?"
+        "Los anticonceptivos me hinchan ?",
+        "Las pastillas me pueden hinchar ?",
+        "Los anticonceptivos provocan la caida de cabello ?"
       ],
       "responses": [
         "Si. El estrogeno en las pildoras anticonceptivas hace que tu cuerpo produzca mas renina-angiotensina, un compuesto creado por los rinones. Cuando esto sucede, el cuerpo retiene mas liquidos, lo que puede hacer que te sientas hinchada."
@@ -397,7 +386,7 @@
     {
       "tag": "ThirtySixteenthQuestion",
       "patterns": [
-        "Me puedo morir si tomo los anticoceptivos",
+        "Me puedo morir si tomo los anticonceptivos",
         "Puedo morirme si tomo los anticonceptivos",
         "Puedo morirme si me tomo las pastillas"
       ],

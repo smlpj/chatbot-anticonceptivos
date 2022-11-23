@@ -209,17 +209,21 @@ class Chatbox {
     if (text1 === "") {
       return;
     }
-
+    let msg1 = { name: "Sam", message: text1 };
+    this.messages.push(msg1);
     this.updateChatText(chatbox);
-    this.intents.find((intent) => {
-      if (intent.question === text1) {
-        intent.answers.forEach((answer) => {
-          let msg2 = { name: "User", message: answer };
-          this.messages.push(msg2);
-          this.updateChatText2(chatbox);
-        });
-      }
-    });
+
+    setTimeout(() => {
+      this.intents.find((intent) => {
+        if (intent.question === text1) {
+          intent.answers.forEach((answer) => {
+            let msg2 = { name: "User", message: answer };
+            this.messages.push(msg2);
+            this.updateChatText2(chatbox);
+          });
+        }
+      });
+    }, 2000);
   }
 
   onMessageButtonOperator(chatbox, button) {
@@ -276,39 +280,69 @@ class Chatbox {
 
   updateChatText2(chatbox) {
     if (this.messages.slice(-1).pop().name === "Sam") {
-      var s =
-        '<div class="message_button messages__item--visitor">' +
-        this.messages.slice(-1).pop().message +
-        "</div>";
-      var temp = document.createElement("div");
-      temp.innerHTML = s;
-      var node = temp.firstChild;
-      node.addEventListener("click", () =>
-        this.onMessageButtonVisitor(chatbox, node)
-      );
+      var loading =
+        '<div class="messages__item messages__item--visitor"><div class="spinner"></div>';
+
+      //Show loading for 2 seconds
+      var tempLoading = document.createElement("div");
+      tempLoading.innerHTML = loading;
+      var nodeLoading = tempLoading.firstChild;
       chatbox
         .querySelector(".chatbox__messages")
         .insertBefore(
-          node,
+          nodeLoading,
           chatbox.querySelector(".chatbox__messages").firstChild
         );
+
+      setTimeout(() => {
+        //Remove loading
+        chatbox.querySelector(".spinner").remove();
+        var temp = document.createElement("div");
+        temp.innerHTML = s;
+        var node = temp.firstChild;
+        node.addEventListener("click", () =>
+          this.onMessageButtonOperator(chatbox, node)
+        );
+        chatbox
+          .querySelector(".chatbox__messages")
+          .insertBefore(
+            node,
+            chatbox.querySelector(".chatbox__messages").firstChild
+          );
+      }, 2000);
     } else {
       var s =
         '<div class="message_button messages__item--operator">' +
         this.messages.slice(-1).pop().message +
         "</div>";
-      var temp = document.createElement("div");
-      temp.innerHTML = s;
-      var node = temp.firstChild;
-      node.addEventListener("click", () =>
-        this.onMessageButtonOperator(chatbox, node)
-      );
+      var loading =
+        '<div class="messages__item messages__item--operator"><div class="spinner"></div>';
+
+      //Show loading for 2 seconds
+      var tempLoading = document.createElement("div");
+      tempLoading.innerHTML = loading;
+      var nodeLoading = tempLoading.firstChild;
       chatbox
         .querySelector(".chatbox__messages")
         .insertBefore(
-          node,
+          nodeLoading,
           chatbox.querySelector(".chatbox__messages").firstChild
         );
+
+      setTimeout(() => {
+        var temp = document.createElement("div");
+        temp.innerHTML = s;
+        var node = temp.firstChild;
+        node.addEventListener("click", () =>
+          this.onMessageButtonOperator(chatbox, node)
+        );
+        chatbox
+          .querySelector(".chatbox__messages")
+          .insertBefore(
+            node,
+            chatbox.querySelector(".chatbox__messages").firstChild
+          );
+      }, 2000);
     }
   }
 }
