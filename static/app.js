@@ -224,7 +224,6 @@ class Chatbox {
 
   onMessageButtonOperator(chatbox, button) {
     let text1 = button.textContent;
-    console.log(text1);
     if (text1 === "") {
       return;
     }
@@ -242,7 +241,7 @@ class Chatbox {
       .then((r) => {
         let msg2 = { name: "Sam", message: r.answer };
         this.messages.push(msg2);
-        this.intents.find((intent) => intent.question === answer)
+        this.intents.find((intent) => intent.question === r.answer)
           ? this.updateChatText2(chatbox)
           : this.updateChatText(chatbox);
       })
