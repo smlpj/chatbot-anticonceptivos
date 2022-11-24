@@ -1,3 +1,3 @@
-web: gunicorn core.wsgi --log-file -
+web: gunicorn wsgi --log-file -
 
 worker: python .\app.py
